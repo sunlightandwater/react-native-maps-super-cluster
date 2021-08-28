@@ -48,7 +48,7 @@ export default class ClusteredMapView extends PureComponent {
       this.clusterize(nextProps.data)
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  UNSAFE_componentWillUpdate(nextProps, nextState) {
     if (!this.isAndroid && this.props.animateClusters && this.clustersChanged(nextState))
       LayoutAnimation.configureNext(this.props.layoutAnimationConf)
   }
